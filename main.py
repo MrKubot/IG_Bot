@@ -1,5 +1,9 @@
 import os
 
+################ Comments and variables are in polish cause I wasn't planning to push it on github
+################ And now I'm too lazy to change it - probably noone will see it ever xD
+
+
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
@@ -89,7 +93,7 @@ while i < 35:
         buttony = popup.find_elements(By.CSS_SELECTOR, value="li button")
         scroll()
         if len(buttony) > len(buttony_nowe):
-            #sprawdza czy rzeczywiscie zaobserwowalo nowych, czy wykonalo scrolla zanim internet pozwolil sie
+            # sprawdza czy rzeczywiscie zaobserwowalo nowych, czy wykonalo scrolla zanim internet pozwolil sie
             # zaladowac popupowi. jezeli sie zaladowalo i zrobilo prawdziwego scrolla to go "zalicza"
             i += 1
             buttony_nowe = buttony
@@ -110,7 +114,7 @@ while nowi_obserwatorzy < 40:
                 i += 1
                 nowi_obserwatorzy += 1
                 time.sleep(1)
-            #jezeli jest juz obserwowany, to pierwsze 'try' sie wykona, ale nastepne juz nie, poniewaz bedzie okieno
+            # jezeli jest juz obserwowany, to pierwsze 'try' sie wykona, ale nastepne juz nie, poniewaz bedzie okieno
             # "czy chcesz przestac obserwowac". W takim wypadku ma wyszukac elementu 'anuluj' i go nacisnac, po czym szukac dalej
             except:
                 try:
@@ -119,6 +123,8 @@ while nowi_obserwatorzy < 40:
                     time.sleep(1)
                     popik.find_elements(By.CSS_SELECTOR, value="button")[1].click()
                     # zmniejszenie 'nowi_obserwatorzy' poniewaz nie byla to "prawdziwa" obserwacja
+                    # nie zmniejszam 'i' poniewaz nie chce, aby ponownie probowalo obserwowac to samo konto.
+                    # Doprowadziloby to do nieskonczonego loopa
                     nowi_obserwatorzy -= 1
                 except:
                     pass
