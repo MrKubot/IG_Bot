@@ -125,28 +125,5 @@ while nowi_obserwatorzy < 40:
         break
     except:
         pass
-        
-
-# while True:
-#     try:
-#         buttony = popup.find_elements(By.CSS_SELECTOR, value="li button")
-#         i = 0
-#         if i == 0:
-#             while True:
-#                 try:
-#                     time.sleep(1.5)
-#                     buttony[i].click()
-#                     i += 1
-#                 except:
-#                     try:
-#                         time.sleep(2)
-#                         popik = driver.find_element(By.XPATH, value='/html/body/div[7]/div/div')
-#                         time.sleep(1)
-#                         popik.find_elements(By.CSS_SELECTOR, value="button")[1].click()
-#                     except:
-#                         scroll()
-#                         break
-#     except:
-#         pass
 
         
