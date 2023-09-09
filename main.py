@@ -1,7 +1,7 @@
 import os
 
-################ Comments and variables are in polish cause I wasn't planning to push it on github
-################ And now I'm too lazy to change it - probably noone will see it ever xD
+################ Comments and variables are in polish cause I wasn't planning to push it on github ####################################
+################ And now I'm too lazy to change it - probably noone will see it ever anyway xD ########################################
 
 
 from selenium import webdriver
@@ -45,7 +45,7 @@ driver.find_element(By.NAME, value="password").send_keys(PASSWORD)
 time.sleep(1)
 driver.find_element(By.XPATH, value='//*[@id="loginForm"]/div/div[3]').click()
 
-#akceptowanie zgód
+#akceptowanie zgód jeżeli jakieś są
 # while True:
 #     try:
 #         driver.find_element(By.XPATH, value='/html/body/div[5]/div/div/div/div[3]/button[2]').click()
